@@ -1,0 +1,25 @@
+employee:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/cinema_schedule
+    driver: com.mysql.cj.jdbc.Driver
+  hibernate:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    format_sql: true
+    ddl-auto: update
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
+spring:
+  jpa:
+    open-in-view: false
